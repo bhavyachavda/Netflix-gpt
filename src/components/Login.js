@@ -21,15 +21,15 @@ const Login = () => {
   const handleButtonClick = () => {
     //validate the form data
 
-    console.log("eamil", email);
-    console.log("password", password);
+    // console.log("eamil", email);
+    // console.log("password", password);
 
     const message = checkValidData(
       email.current.value,
       password.current.value,
       name?.current?.value
     );
-    console.log("messafe", message);
+    // console.log("messafe", message);
 
     setErrorMessage(message);
 
@@ -64,7 +64,7 @@ const Login = () => {
             // An error occurred
             // ...
           });
-          console.log("singup", user);
+          // console.log("singup", user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -77,7 +77,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log("singin",user)
+          // console.log("singin",user)
           // navigate("/browse");
           // ...
         })
